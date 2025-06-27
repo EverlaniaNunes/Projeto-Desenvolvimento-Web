@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Área Administrativa</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h1>Área Administrativa</h1>
+
+  <!-- CLIENTES -->
+  <section id="clientes">
+    <h2>Cadastro de Clientes</h2>
+    <form id="form-clientes">
+      <input type="text" name="nome" placeholder="Nome completo" required />
+      <input type="text" name="cpf" placeholder="CPF/CNPJ" required />
+      <input type="email" name="email" placeholder="E-mail" required />
+      <input type="text" name="endereco" placeholder="Endereço" required />
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    
+
+  <hr />
+
+  <!-- ENCOMENDAS -->
+  <section id="encomendas">
+    <h2>Cadastro de Encomendas</h2>
+    <form id="form-encomendas">
+      <input type="number" name="peso" placeholder="Peso (kg)" required />
+      <select name="tipo" required>
+        <option value="">Tipo</option>
+        <option value="documento">Documento</option>
+        <option value="caixa">Caixa</option>
+        <option value="palete">Palete</option>
+      </select>
+      <input type="text" name="descricao" placeholder="Descrição" required />
+      <input type="text" name="endereco" placeholder="Endereço de Entrega" required />
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    
+
+  <hr />
+
+  <!-- ROTAS -->
+  <section id="rotas">
+    <h2>Cadastro de Rotas de Entrega</h2>
+    <form id="form-rotas">
+      <input type="text" name="origem" placeholder="Origem" required />
+      <input type="text" name="destino" placeholder="Destino" required />
+      <input type="text" name="centros" placeholder="Centros intermediários (separar por vírgula)" />
+      <input type="number" name="distancia" placeholder="Distância (km)" required />
+      <input type="number" name="tempo" placeholder="Tempo estimado (h)" required />
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    
+  <hr />
+
+  <!-- ENTREGAS -->
+  <section id="entregas">
+    <h2>Cadastro de Entregas</h2>
+    <form id="form-entregas">
+      <input type="text" name="cliente" placeholder="ID do Cliente" required />
+      <input type="text" name="encomenda" placeholder="ID da Encomenda" required />
+      <input type="text" name="rota" placeholder="ID da Rota" required />
+      <input type="date" name="previsao" required />
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    
+
+  <!-- Scripts -->
+  <script src="js/clientes.js"></script>
+  <script src="js/encomendas.js"></script>
+  <script src="js/rotas.js"></script>
+  <script src="js/entregas.js"></script>
+</body>
+</html>
+
